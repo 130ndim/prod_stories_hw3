@@ -48,7 +48,7 @@ if __name__ == '__main__':
 
     points = []
     with open(args.input, 'r') as f:
-        for i, line in enumerate(f):
+        for i, line in enumerate(f, start=1):
             r = line.split()
             if not all(map(str.isdigit, r)) or len(r) != 2:
                 raise ValueError('Wrong value in line %s!' % i)
